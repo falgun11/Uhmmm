@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Avni 🤍</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background: linear-gradient(135deg,#fff,#ffe6f2);
+    overflow:hidden;
+    color:#333;
+}
+
+/* Soft Glow Background */
+body::before{
+    content:"";
+    position:absolute;
+    width:600px;
+    height:600px;
+    background:radial-gradient(circle,#ffcce6,transparent 70%);
+    top:-200px;
+    left:-200px;
+    filter:blur(100px);
+    animation: glowMove 10s infinite alternate;
+}
+
+@keyframes glowMove{
+    from{transform:translate(0,0);}
+    to{transform:translate(200px,150px);}
+}
+
+.page{
+    position:absolute;
+    width:100%;
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:40px;
+    opacity:0;
+    transform:translateX(100%);
+    transition:all 0.8s ease;
+}
+
+.page.active{
+    opacity:1;
+    transform:translateX(0);
+}
+
+h1{
+    font-size:42px;
+    margin-bottom:25px;
+}
+
+p{
+    max-width:750px;
+    margin:15px 0;
+    font-size:19px;
+    line-height:1.9;
+}
+
+button{
+    margin-top:25px;
+    padding:14px 35px;
+    font-size:16px;
+    border:none;
+    border-radius:40px;
+    cursor:pointer;
+    background:#ff4d88;
+    color:white;
+    transition:0.3s;
+    animation:pulse 2s infinite;
+}
+
+button:hover{
+    transform:scale(1.1);
+    background:#ff1a66;
+}
+
+.choice{
+    background:#ddd;
+    color:#444;
+    animation:none;
+}
+
+@keyframes pulse{
+    0%{box-shadow:0 0 0 0 rgba(255,77,136,0.6);}
+    70%{box-shadow:0 0 0 15px rgba(255,77,136,0);}
+    100%{box-shadow:0 0 0 0 rgba(255,77,136,0);}
+}
+
+/* Floating Hearts */
+.heart{
+    position:absolute;
+    bottom:-20px;
+    animation:floatUp 6s linear infinite;
+    opacity:0.6;
+}
+
+@keyframes floatUp{
+    0%{transform:translateY(0); opacity:0.7;}
+    100%{transform:translateY(-110vh); opacity:0;}
+}
+</style>
+</head>
+
+<body>
+
+<!-- PAGE 1 -->
+<div class="page active" id="p1">
+    <h1>Will you be my Valentine? 🤍✨</h1>
+    <button onclick="nextPage()">Yes 🤍</button>
+    <button class="choice" onclick="noClicked(this)">No</button>
+    <p id="noText" style="color:#ff1a66;margin-top:15px;"></p>
+</div>
+
+<!-- PAGE 2 -->
+<div class="page" id="p2">
+    <h1>Happy Valentine's Day, Avni my girlll 🤍🌸</h1>
+    <p>
+    Avni you are truly one of the most beautiful souls I have ever met 🥺🤍 The way you exist so softly yet leave such a strong impact on my heart is something I cannot even explain properly ✨ Every little thing about you feels special to me from your smile to your energy to the comfort I feel when I talk to you 🌷 You deserve to feel valued adored and cherished every single day not just today 💫
+    </p>
+    <button onclick="nextPage()">Next 🤍</button>
+</div>
+
+<!-- PAGE 3 -->
+<div class="page" id="p3">
+    <h1>My Pandaaaa 🤍🐼</h1>
+    <p>
+    My Pandaaaa you have no idea how much I care about you 🥹🤍 Your happiness genuinely matters to me and when you are upset I feel it too 🌙 You are not just someone I talk to you are someone I feel connected to deeply and peacefully 🌸 I want you to always feel safe appreciated and important because to me you truly are irreplaceable 💖
+    </p>
+    <button onclick="nextPage()">Next 🤍</button>
+</div>
+
+<!-- PAGE 4 -->
+<div class="page" id="p4">
+    <h1>Babeee 🤍💗</h1>
+    <p>
+    Babeee I do not just want moments with you I want memories that we can look back at and smile about 🌷✨ I want late night talks random laughs cute pictures comfort hugs and everything in between 🥰 I want to grow with you create something meaningful with you and build something that feels warm safe and real 💞
+    </p>
+    <button onclick="nextPage()">Next 🤍</button>
+</div>
+
+<!-- PAGE 5 -->
+<div class="page" id="p5">
+    <h1>Something Important 🤍🌙</h1>
+    <p>
+    Yes I know I can be dumb sometimes 🙈 and maybe I do not always express myself perfectly but please understand this my feelings for you are real and sincere 💗 I love you honestly deeply and completely 🥺🤍 Even when I struggle with words my heart has always been serious about you and always will be ✨
+    </p>
+    <button onclick="nextPage()">Next 🤍</button>
+</div>
+
+<!-- PAGE 6 -->
+<div class="page" id="p6">
+    <h1>You 🤍✨</h1>
+    <p>
+    You are beautiful in ways that go beyond appearance 🌸 You are soft yet strong caring yet independent cute without even trying and powerful in the calmest way 🌷 There is something about you that feels peaceful comforting and magical at the same time 💫 Being close to you feels like home 🥺🤍
+    </p>
+    <button onclick="nextPage()">Next 🤍</button>
+</div>
+
+<!-- PAGE 7 -->
+<div class="page" id="p7">
+    <h1>My Promise 🤍💍</h1>
+    <p>
+    I promise to stay even when things are not easy 🌙 I promise to choose you not just in happy moments but in difficult ones too 💗 I promise effort consistency loyalty and care because you deserve someone who truly values you 🥹🤍 I want to be that person for you always ✨
+    </p>
+    <button onclick="nextPage()">Next 🤍</button>
+</div>
+
+<!-- PAGE 8 -->
+<div class="page" id="p8">
+    <h1>Click This 🤍🎁</h1>
+    <button onclick="alert('I love you so much Avni 🤍✨')">Open 🤍</button>
+    <button onclick="nextPage()">Next 🤍</button>
+</div>
+
+<!-- PAGE 9 NEW FEAR PAGE -->
+<div class="page" id="p9">
+    <h1>You Know My Biggest Fear? 🤍🌙</h1>
+    <p>
+    You know what my biggest fear is 🥺 It is not failure or distance or anything else in this world it is losing you 🤍 The thought of you not being in my life one day genuinely scares me because you have become such an important part of my heart 🌸✨ I care about you more than I show sometimes and I truly cannot imagine my life without you in it 💭 Please do not ever leave me because I want to stay beside you grow with you and protect what we have for as long as life allows 🤍
+    </p>
+    <button onclick="nextPage()">Next 🤍</button>
+</div>
+
+<!-- PAGE 10 FINAL -->
+<div class="page" id="p10">
+    <h1>The Most Special Woman In The World 🤍👑</h1>
+    <p>
+    The most special woman in the world is you Avni 🥺🤍 I feel lucky every day that I get to know you talk to you and care about you the way I do 🌸✨ You are appreciated more than you realize and loved more than you think 💞 Happy Valentine's Day my girlll you truly deserve the world and so much more 🌷🤍
+    </p>
+</div>
+
+<script>
+let current=1;
+
+function nextPage(){
+    if(current<10){
+        document.getElementById("p"+current).classList.remove("active");
+        current++;
+        document.getElementById("p"+current).classList.add("active");
+    }
+}
+
+function noClicked(btn){
+    btn.style.display="none";
+    document.getElementById("noText").innerText="You have to select Yes dumbo 🤍😌";
+}
+
+function createHeart(){
+    const heart=document.createElement("div");
+    heart.className="heart";
+    heart.innerText="🤍";
+    heart.style.left=Math.random()*100+"vw";
+    heart.style.fontSize=(15+Math.random()*20)+"px";
+    heart.style.animationDuration=(4+Math.random()*3)+"s";
+    document.body.appendChild(heart);
+    setTimeout(()=>heart.remove(),6000);
+}
+setInterval(createHeart,500);
+</script>
+
+</body>
+</html>
